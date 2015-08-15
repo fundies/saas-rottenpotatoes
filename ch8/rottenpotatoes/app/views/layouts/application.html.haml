@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+    %title Rotten Potatoes!
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'movie_popup'
+    = javascript_include_tag 'movie_popup_spec'
+    = csrf_meta_tags
+
+  %body
+    %h1.title Rotten Potatoes!
+    %h2
+      = form_tag '/sessions', method: :post do
+        = render :partial => 'sessions/login'
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+
+      = yield

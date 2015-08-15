@@ -1,0 +1,8 @@
+-# new.html.haml using partial
+
+%h2 Create New Movie
+= form_tag '/movies', :method => :post do
+  = render :partial => 'movie_form'
+  = submit_tag 'Save Changes'
+
+= button_to 'Back', movies_path, method: :get

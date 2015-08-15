@@ -1,0 +1,932 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 13:49:28 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (4.1ms)
+  Rendered sessions/_login.html.haml (1.4ms)
+Completed 200 OK in 109.8ms (Views: 74.9ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 13:49:28 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (8.4ms)
+  Rendered movies/new.html.haml within layouts/application (10.9ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 19.2ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 13:52:32 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (4.2ms)
+  Rendered sessions/_login.html.haml (1.4ms)
+Completed 200 OK in 107.0ms (Views: 72.9ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 13:52:33 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (7.8ms)
+  Rendered movies/new.html.haml within layouts/application (9.9ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 17.3ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 13:52:33 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (31.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Aug 2015 17:52:33 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Thu, 13 Aug 2015 17:52:33 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 35.2ms (ActiveRecord: 31.4ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 13:52:33 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.8ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 3.7ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (6.9ms)
+  Rendered sessions/_login.html.haml (1.7ms)
+Completed 200 OK in 138.7ms (Views: 95.4ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (11.0ms)
+  Rendered movies/new.html.haml within layouts/application (13.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 23.0ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Aug 2015 18:07:46 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Thu, 13 Aug 2015 18:07:46 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 9.4ms (ActiveRecord: 4.6ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.5ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 5.0ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.0ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.3ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 1.4ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:07:46 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (0.9ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.0ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:09:44 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+  Rendered sessions/_login.html.haml (1.7ms)
+Completed 200 OK in 140.5ms (Views: 96.1ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (7.7ms)
+  Rendered movies/new.html.haml within layouts/application (9.9ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 17.2ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Aug 2015 18:09:45 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Thu, 13 Aug 2015 18:09:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 6.9ms (ActiveRecord: 3.3ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.2ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 4.0ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.7ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 3.2ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 1.1ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (0.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.0ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (0.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.7ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 1.0ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:09:45 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (82.9ms)
+  Rendered sessions/_login.html.haml (4.2ms)
+Completed 200 OK in 291.7ms (Views: 202.6ms | ActiveRecord: 1.1ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (27.7ms)
+  Rendered movies/new.html.haml within layouts/application (35.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 62.3ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Aug 2015 18:14:25 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Thu, 13 Aug 2015 18:14:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 24.1ms (ActiveRecord: 11.6ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (4.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 13.8ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (66.8ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 11.8ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3.7ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.9ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 11.5ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:14:25 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 2.9ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:14:26 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.7ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:40 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (84.4ms)
+  Rendered sessions/_login.html.haml (4.2ms)
+Completed 200 OK in 294.7ms (Views: 204.0ms | ActiveRecord: 1.1ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (27.6ms)
+  Rendered movies/new.html.haml within layouts/application (35.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 61.9ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Aug 2015 18:15:41 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Thu, 13 Aug 2015 18:15:41 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 24.1ms (ActiveRecord: 11.6ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (4.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 13.9ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#new as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  Rendered movies/_movie_form.html.haml (10.6ms)
+  Rendered movies/new.html.haml within layouts/application (13.7ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 22.0ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Zorro", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 13 Aug 2015 18:15:41 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Zorro"], ["updated_at", Thu, 13 Aug 2015 18:15:41 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 8.2ms (ActiveRecord: 1.2ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 12.1ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (10.8ms)
+  Rendered movies/new.html.haml within layouts/application (13.9ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 21.9ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Apocalypse Now", "rating"=>"R", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"13", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Aug 2015 18:15:41 UTC +00:00], ["description", ""], ["rating", "R"], ["release_date", Thu, 13 Aug 2015 00:00:00 UTC +00:00], ["title", "Apocalypse Now"], ["updated_at", Thu, 13 Aug 2015 18:15:41 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 8.3ms (ActiveRecord: 1.2ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (4.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 13.2ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (4.9ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 14.4ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 86.6ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3.7ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.9ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 11.7ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3.0ms (ActiveRecord: 0.2ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 14:15:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.8ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (6.4ms)
+  Rendered sessions/_login.html.haml (1.7ms)
+Completed 200 OK in 126.2ms (Views: 86.6ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (10.0ms)
+  Rendered movies/new.html.haml within layouts/application (12.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 21.9ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (35.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 02:48:21 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Fri, 14 Aug 2015 02:48:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 40.0ms (ActiveRecord: 35.8ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.5ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 5.0ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#new as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  Rendered movies/_movie_form.html.haml (3.3ms)
+  Rendered movies/new.html.haml within layouts/application (4.2ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 7.2ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Zorro", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Aug 2015 02:48:21 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Zorro"], ["updated_at", Fri, 14 Aug 2015 02:48:21 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3.3ms (ActiveRecord: 0.5ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.2ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (3.2ms)
+  Rendered movies/new.html.haml within layouts/application (4.2ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 6.8ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 22:48:21 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Apocalypse Now", "rating"=>"R", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 02:48:21 UTC +00:00], ["description", ""], ["rating", "R"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Apocalypse Now"], ["updated_at", Fri, 14 Aug 2015 02:48:21 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3.3ms (ActiveRecord: 0.5ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 5.2ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 5.2ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.9ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.2ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 87.2ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 7.7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 6.2ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 58.7ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 22:48:22 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 7.1ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:51 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+  Rendered sessions/_login.html.haml (1.3ms)
+Completed 200 OK in 110.2ms (Views: 75.6ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:32:51 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (7.6ms)
+  Rendered movies/new.html.haml within layouts/application (9.7ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 17.2ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 03:32:52 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Fri, 14 Aug 2015 03:32:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 36.3ms (ActiveRecord: 32.2ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.3ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#new as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  Rendered movies/_movie_form.html.haml (2.9ms)
+  Rendered movies/new.html.haml within layouts/application (3.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 6.2ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Zorro", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Aug 2015 03:32:52 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Zorro"], ["updated_at", Fri, 14 Aug 2015 03:32:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 2.8ms (ActiveRecord: 0.5ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.1ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.6ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (3.2ms)
+  Rendered movies/new.html.haml within layouts/application (4.4ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 7.0ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Apocalypse Now", "rating"=>"R", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 03:32:52 UTC +00:00], ["description", ""], ["rating", "R"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Apocalypse Now"], ["updated_at", Fri, 14 Aug 2015 03:32:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 2.7ms (ActiveRecord: 0.4ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.9ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.9ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.9ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 88.7ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 5.8ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.2ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 5.6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 23:32:52 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/search_tmdb.html.haml within layouts/application (14.3ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 83.1ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:33 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (5.1ms)
+  Rendered sessions/_login.html.haml (1.3ms)
+Completed 200 OK in 108.6ms (Views: 74.6ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (7.8ms)
+  Rendered movies/new.html.haml within layouts/application (10.0ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 17.4ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (31.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 03:40:34 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Fri, 14 Aug 2015 03:40:34 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 35.7ms (ActiveRecord: 31.9ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.2ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.0ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#new as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  Rendered movies/_movie_form.html.haml (2.9ms)
+  Rendered movies/new.html.haml within layouts/application (3.8ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 6.2ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Zorro", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Aug 2015 03:40:34 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Zorro"], ["updated_at", Fri, 14 Aug 2015 03:40:34 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 2.5ms (ActiveRecord: 0.4ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.0ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.5ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (2.8ms)
+  Rendered movies/new.html.haml within layouts/application (3.6ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 6.2ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Apocalypse Now", "rating"=>"R", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 03:40:34 UTC +00:00], ["description", ""], ["rating", "R"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Apocalypse Now"], ["updated_at", Fri, 14 Aug 2015 03:40:34 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 2.6ms (ActiveRecord: 0.4ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.7ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.0ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 3.3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 91.9ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.0ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 8.0ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 23:40:34 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/search_tmdb.html.haml within layouts/application (14.4ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 87.7ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:42:06 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (5.2ms)
+  Rendered sessions/_login.html.haml (1.1ms)
+Completed 200 OK in 81.8ms (Views: 74.2ms | ActiveRecord: 0.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2015-08-13 23:42:06 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/_movie_form.html.haml (7.9ms)
+  Rendered movies/new.html.haml within layouts/application (10.1ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 17.9ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+Started POST "/movies" for 127.0.0.1 at 2015-08-13 23:42:06 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men In Black", "rating"=>"PG-13", "release_date(1i)"=>"2015", "release_date(2i)"=>"8", "release_date(3i)"=>"14", "description"=>""}, "commit"=>"Save Changes"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (31.9ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Aug 2015 03:42:06 UTC +00:00], ["description", ""], ["rating", "PG-13"], ["release_date", Fri, 14 Aug 2015 00:00:00 UTC +00:00], ["title", "Men In Black"], ["updated_at", Fri, 14 Aug 2015 03:42:06 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 36.0ms (ActiveRecord: 32.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:42:06 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.2ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.1ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:42:06 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (0.7ms)
+  Rendered sessions/_login.html.haml (0.0ms)
+Completed 200 OK in 3.2ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 23:42:06 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Movie That Does Not Exist", "commit"=>"Search TMDb"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 1066.5ms (ActiveRecord: 0.1ms)
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:42:07 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 9.8ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2015-08-13 23:42:08 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (1.0ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 4.4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2015-08-13 23:42:08 -0400
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "search_terms"=>"Inception", "commit"=>"Search TMDb"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+  Rendered movies/search_tmdb.html.haml within layouts/application (12.8ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 83.7ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

@@ -1,0 +1,3552 @@
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20111119180638)
+Migrating to CreateMoviegoers (20150811184016)
+Migrating to CreateReviews (20150812222806)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 08:21:52 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (31.8ms)
+  Rendered sessions/_login.html.haml (1.3ms)
+Completed 200 OK in 129.6ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /movie_popup.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 08:21:53 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 08:22:00 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered movies/_movie.html.haml (1.9ms)
+Completed 200 OK in 6.1ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 08:22:00 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 4.7ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/5/edit" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered movies/_movie_form.html.haml (11.8ms)
+  Rendered movies/edit.html.haml within layouts/application (16.5ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 25.4ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:03 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (5.7ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 19.4ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 08:22:14 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5/reviews/new" for 127.0.0.1 at 2015-08-15 08:22:21 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"5"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/auth/twitter
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1
+Filter chain halted as :has_moviegoer_and_movie rendered or redirected
+Completed 302 Found in 2.0ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2015-08-15 08:22:21 -0400
+
+OAuth::Unauthorized (401 Authorization Required):
+  oauth (0.4.7) lib/oauth/consumer.rb:216:in `token_request'
+  oauth (0.4.7) lib/oauth/consumer.rb:136:in `get_request_token'
+  omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:28:in `request_phase'
+  omniauth-twitter (1.2.1) lib/omniauth/strategies/twitter.rb:61:in `request_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:215:in `request_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:183:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.15) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.15) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:405:in `_run__942915864700761877__call__2672873997525278706__callbacks'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.15) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.15) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.15) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.15) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.15) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.15) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.15) lib/rails/engine.rb:484:in `call'
+  railties (3.2.15) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.15) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/greg/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/greg/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/greg/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (48.2ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.7ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2015-08-15 15:26:42 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=darIbQAAAAAAgqP_AAABTzLUEMo&oauth_verifier=vQKgsQeuZ9sPEs7eyv0vbl8U2rHQ6Tm6" for 127.0.0.1 at 2015-08-15 15:26:43 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"darIbQAAAAAAgqP_AAABTzLUEMo", "oauth_verifier"=>"vQKgsQeuZ9sPEs7eyv0vbl8U2rHQ6Tm6", "twitter"=>"twitter"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."provider" = 'twitter' AND "moviegoers"."uid" = '3416738355' LIMIT 1[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 11.6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 14.1ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:44 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:26:54 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 8.5ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:26:54 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 4.7ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/5/reviews/new" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (2.4ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 110.3ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:26:56 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/5/reviews" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"4"}, "commit"=>"Create Review", "movie_id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 5], ["moviegoer_id", 1], ["potatoes", 4]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/5
+Completed 302 Found in 46.7ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (0.9ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 7.0ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:27:00 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:28:54 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (42.2ms)
+Completed 500 Internal Server Error in 47.2ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    4: 
+    5: %ul#details
+    6:   %li Average Potatoes
+    7:     #{@score}
+    8:   %li
+    9:     Rating:
+    10:     = @movie.rating
+  app/views/movies/show.html.haml:7
+
+
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:29:09 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7.0ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    4: 
+    5: %ul#details
+    6:   %li Average Potatoes
+    7:     = #{@score}
+    8:   %li
+    9:     Rating:
+    10:     = @movie.rating
+  app/views/movies/show.html.haml:7
+
+
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.4ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (6.1ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 50.0ms (Views: 46.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:35 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5/reviews/new" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"5"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (1.9ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.7ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:49 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/5/reviews" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"1"}, "commit"=>"Create Review", "movie_id"=>"5"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 5], ["moviegoer_id", 1], ["potatoes", 1]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/5
+Completed 302 Found in 8.5ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (1.0ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 7.8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:29:50 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/5/reviews/new" for 127.0.0.1 at 2015-08-15 15:31:37 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (1.8ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 13.4ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:37 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:37 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:38 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/5/reviews" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"5"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 5], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/5
+Completed 302 Found in 10.5ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered movies/show.html.haml within layouts/application (1.9ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 12.5ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:41 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.7ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:44 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-08-15 15:31:48 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[35mMoviegoer Load (0.4ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered movies/_movie.html.haml (1.6ms)
+Completed 200 OK in 10.1ms (Views: 6.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-08-15 15:31:48 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered movies/_movie.html.haml (0.6ms)
+Completed 200 OK in 4.8ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/6/reviews/new" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"6"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 6 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (1.9ms)
+  Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 17.1ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:49 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/6/reviews" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"6"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 6], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/6
+Completed 302 Found in 10.2ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered movies/show.html.haml within layouts/application (29.8ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 37.2ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:53 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (3.0ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.6ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:55 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2015-08-15 15:31:56 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 7.2ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2015-08-15 15:31:56 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 4.6ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/7/reviews/new" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"7"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 7 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (1.8ms)
+  Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 16.9ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:31:59 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/7/reviews" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"7"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 7], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/7
+Completed 302 Found in 10.5ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered movies/show.html.haml within layouts/application (1.6ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 11.8ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:03 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (5.2ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 19.7ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:05 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/8" for 127.0.0.1 at 2015-08-15 15:32:08 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered movies/_movie.html.haml (0.7ms)
+Completed 200 OK in 6.2ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/8" for 127.0.0.1 at 2015-08-15 15:32:08 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered movies/_movie.html.haml (1.0ms)
+Completed 200 OK in 6.1ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/8/reviews/new" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"8"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 8 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (0.8ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 6.9ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:10 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/8/reviews" for 127.0.0.1 at 2015-08-15 15:32:12 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"8"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 8], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/8
+Completed 302 Found in 11.7ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/movies/8" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered movies/show.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.2ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:13 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (4.2ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 16.2ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:15 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/9" for 127.0.0.1 at 2015-08-15 15:32:16 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 6.5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/9" for 127.0.0.1 at 2015-08-15 15:32:16 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 5.9ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/9/reviews/new" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"9"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 9 LIMIT 1[0m
+  Rendered reviews/new.html.haml within layouts/application (1.2ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 11.9ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:18 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/9/reviews" for 127.0.0.1 at 2015-08-15 15:32:21 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"9"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)  [["comments", nil], ["movie_id", 9], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/9
+Completed 302 Found in 11.4ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/movies/9" for 127.0.0.1 at 2015-08-15 15:32:21 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mMoviegoer Load (0.3ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  Rendered movies/show.html.haml within layouts/application (1.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 13.4ms (Views: 9.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:32:22 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/9" for 127.0.0.1 at 2015-08-15 15:37:53 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 9 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 9[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 9
+  Rendered movies/show.html.haml within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 36.1ms
+
+ActionView::Template::Error (undefined method `score' for #<Review:0x007f560013c3d0>):
+    5: %ul#details
+    6:   %li 
+    7:     Average Potatoes:
+    8:     = @movie.avgscore
+    9:   %li
+    10:     Rating:
+    11:     = @movie.rating
+  app/models/movie.rb:52:in `block in avgscore'
+  app/models/movie.rb:52:in `avgscore'
+  app/views/movies/show.html.haml:8:in `_app_views_movies_show_html_haml__207375100804579027_70003673475720'
+
+
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/movies/9" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 9
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 9[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 9
+  Rendered movies/show.html.haml within layouts/application (12.0ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 71.1ms (Views: 17.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:38:42 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-08-15 15:39:06 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 5.8ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2015-08-15 15:39:06 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered movies/_movie.html.haml (0.6ms)
+Completed 200 OK in 5.0ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (2.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (30.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00], ["description", nil], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Fri, 21 Jul 1989 00:00:00 UTC +00:00], ["title", "When Harry Met Sally"], ["updated_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00], ["description", nil], ["rating", "PG-13"], ["release_date", Wed, 10 Aug 2011 00:00:00 UTC +00:00], ["title", "The Help"], ["updated_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00], ["description", nil], ["rating", "PG"], ["release_date", Fri, 12 Jun 1981 00:00:00 UTC +00:00], ["title", "Raiders Of The Lost Ark"], ["updated_at", Sat, 15 Aug 2015 19:39:22 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:39:47 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (34.2ms)
+  Rendered sessions/_login.html.haml (1.5ms)
+Completed 200 OK in 127.4ms (Views: 84.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /movie_popup.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:48 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:39:53 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (4.3ms)
+Completed 200 OK in 17.8ms (Views: 13.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:39:53 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.4ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (1.7ms)
+Completed 200 OK in 9.5ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie_form.html.haml (10.2ms)
+  Rendered movies/edit.html.haml within layouts/application (44.1ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 54.7ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:39:58 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (113.9ms)
+  Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 124.8ms (Views: 120.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:00 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 15:40:03 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/auth/twitter
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+Filter chain halted as :has_moviegoer_and_movie rendered or redirected
+Completed 302 Found in 3.0ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2015-08-15 15:40:03 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=3kQW7wAAAAAAgqP_AAABTzLgSG8&oauth_verifier=hIbVzx3vMlaaELvCNnauWV5ve79CepbS" for 127.0.0.1 at 2015-08-15 15:40:04 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"3kQW7wAAAAAAgqP_AAABTzLgSG8", "oauth_verifier"=>"hIbVzx3vMlaaELvCNnauWV5ve79CepbS", "twitter"=>"twitter"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."provider" = 'twitter' AND "moviegoers"."uid" = '3416738355' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (44.5ms)[0m  [1mINSERT INTO "moviegoers" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:40:05 UTC +00:00], ["name", "Greg Williamson"], ["provider", "twitter"], ["uid", "3416738355"], ["updated_at", Sat, 15 Aug 2015 19:40:05 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 61.6ms (ActiveRecord: 48.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 12.2ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:05 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:40:07 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 5.3ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:40:07 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 5.1ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (2.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 17.7ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:09 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/reviews" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"3"}, "commit"=>"Create Review", "movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 1], ["moviegoer_id", 1], ["potatoes", 3]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 59.6ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (3.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 10.0ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:12 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 12.0ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:14 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/reviews" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 1], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 9.8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.5ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (5.8ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 16.8ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:18 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (2.3ms)
+  Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 19.1ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:41 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/reviews" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 1], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[35m (4.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 12.3ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (4.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 12.2ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:40:44 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 45.2ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:42:47 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:44:09 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (56.1ms)
+Completed 500 Internal Server Error in 61.2ms
+
+ActionView::Template::Error (undefined local variable or method `move' for #<#<Class:0x007f2924da10c0>:0x007f29244ee590>):
+    13:     - @movies.each_with_index do |movie, index|
+    14:       %tr{:class => ('adult' unless movie.rating =~ /^G|PG$/)}
+    15:         %td= movie.title
+    16:         %td= move.avgscore
+    17:         %td= movie.rating
+    18:         %td= movie.release_date
+    19:         %td= link_to "More about #{movie.title}", movie_path(movie)
+  app/views/movies/index.html.haml:16:in `block in _app_views_movies_index_html_haml__375806153208650023_69907339765320'
+  app/views/movies/index.html.haml:13:in `each'
+  app/views/movies/index.html.haml:13:in `each_with_index'
+  app/views/movies/index.html.haml:13:in `_app_views_movies_index_html_haml__375806153208650023_69907339765320'
+
+
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (15.3ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 26.2ms (Views: 22.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:44:20 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (3.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Fri, 21 Jul 1989 00:00:00 UTC +00:00], ["title", "When Harry Met Sally"], ["updated_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00], ["description", nil], ["rating", "PG-13"], ["release_date", Wed, 10 Aug 2011 00:00:00 UTC +00:00], ["title", "The Help"], ["updated_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00], ["description", nil], ["rating", "PG"], ["release_date", Fri, 12 Jun 1981 00:00:00 UTC +00:00], ["title", "Raiders Of The Lost Ark"], ["updated_at", Sat, 15 Aug 2015 19:46:22 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 15:46:41 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (72.6ms)
+  Rendered sessions/_login.html.haml (1.5ms)
+Completed 200 OK in 192.0ms (Views: 146.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 15:46:41 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 15:46:42 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:46:43 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (2.1ms)
+Completed 200 OK in 9.0ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 15:46:43 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 4.8ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00], ["description", "Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship."], ["rating", "R"], ["release_date", Fri, 21 Jul 1989 00:00:00 UTC +00:00], ["title", "When Harry Met Sally"], ["updated_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00], ["description", "An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African-American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis."], ["rating", "PG-13"], ["release_date", Wed, 10 Aug 2011 00:00:00 UTC +00:00], ["title", "The Help"], ["updated_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00], ["description", "Archaeologist and adventurer Indiana Jones is hired by the US government to find the Ark of the Covenant before the Nazis."], ["rating", "PG"], ["release_date", Fri, 12 Jun 1981 00:00:00 UTC +00:00], ["title", "Raiders Of The Lost Ark"], ["updated_at", Sat, 15 Aug 2015 19:50:19 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (2.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:56:03 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:56:03 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (2.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.9ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:56:34 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:56:34 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "moviegoers" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:56:34 UTC +00:00], ["name", "Person_{:title=>\"Aladdin\", :rating=>\"G\", :release_date=>\"25-Nov-1992\", :description=>\"When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her.\"}"], ["provider", nil], ["uid", nil], ["updated_at", Sat, 15 Aug 2015 19:56:34 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (2.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (3.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (29.9ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:58:03 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:58:03 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "moviegoers" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:58:03 UTC +00:00], ["name", "Person_{:title=>\"Aladdin\", :rating=>\"G\", :release_date=>\"25-Nov-1992\", :description=>\"When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her.\"}"], ["provider", nil], ["uid", nil], ["updated_at", Sat, 15 Aug 2015 19:58:03 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (4.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (25.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:58:55 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:58:55 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "moviegoers" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:58:55 UTC +00:00], ["name", "Person_{:title=>\"Aladdin\", :rating=>\"G\", :release_date=>\"25-Nov-1992\", :description=>\"When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her.\"}"], ["provider", nil], ["uid", nil], ["updated_at", Sat, 15 Aug 2015 19:58:55 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (2.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (25.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 19:59:10 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 19:59:10 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "moviegoers" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 19:59:10 UTC +00:00], ["name", "Person_{:title=>\"Aladdin\", :rating=>\"G\", :release_date=>\"25-Nov-1992\", :description=>\"When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her.\"}"], ["provider", nil], ["uid", nil], ["updated_at", Sat, 15 Aug 2015 19:59:10 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (2.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "potatoes" integer, "comments" text, "moviegoer_id" integer, "movie_id" integer) 
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (3.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150812222806')
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811184016')[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (2.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00], ["description", "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her."], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00], ["description", "Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship."], ["rating", "R"], ["release_date", Fri, 21 Jul 1989 00:00:00 UTC +00:00], ["title", "When Harry Met Sally"], ["updated_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00], ["description", "An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African-American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis."], ["rating", "PG-13"], ["release_date", Wed, 10 Aug 2011 00:00:00 UTC +00:00], ["title", "The Help"], ["updated_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00], ["description", "Archaeologist and adventurer Indiana Jones is hired by the US government to find the Ark of the Covenant before the Nazis."], ["rating", "PG"], ["release_date", Fri, 12 Jun 1981 00:00:00 UTC +00:00], ["title", "Raiders Of The Lost Ark"], ["updated_at", Sat, 15 Aug 2015 20:00:26 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:01:10 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (70.9ms)
+  Rendered sessions/_login.html.haml (1.3ms)
+Completed 200 OK in 184.6ms (Views: 142.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:11 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:15 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (1.6ms)
+Completed 200 OK in 6.2ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:15 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.7ms)
+Completed 200 OK in 7.4ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 16:01:16 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/auth/twitter
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+Filter chain halted as :has_moviegoer_and_movie rendered or redirected
+Completed 302 Found in 1.8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2015-08-15 16:01:16 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=iWBXUAAAAAAAgqP_AAABTzLztu4&oauth_verifier=YoXxOWoMbhV7EHLqQSt7P15FmqhBgwYe" for 127.0.0.1 at 2015-08-15 16:01:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"iWBXUAAAAAAAgqP_AAABTzLztu4", "oauth_verifier"=>"YoXxOWoMbhV7EHLqQSt7P15FmqhBgwYe", "twitter"=>"twitter"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."provider" = 'twitter' AND "moviegoers"."uid" = '3416738355' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "moviegoers" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Aug 2015 20:01:18 UTC +00:00], ["name", "Greg Williamson"], ["provider", "twitter"], ["uid", "3416738355"], ["updated_at", Sat, 15 Aug 2015 20:01:18 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 16.0ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (9.5ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 20.0ms (Views: 15.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:18 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:20 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 6.0ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:20 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 5.5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (3.9ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 27.1ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:21 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/reviews" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 1], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 45.0ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (9.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 18.3ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:25 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (1.2ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 11.9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:27 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/reviews" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"3"}, "commit"=>"Create Review", "movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 1], ["moviegoer_id", 1], ["potatoes", 3]]
+  [1m[35m (3.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 12.0ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (5.7ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 17.9ms (Views: 15.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:29 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/reviews/new" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (1.3ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 12.8ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:33 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/reviews" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"3"}, "commit"=>"Create Review", "movie_id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 1], ["moviegoer_id", 1], ["potatoes", 3]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 11.1ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (5.1ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 14.9ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:01:36 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  Rendered movies/show.html.haml within layouts/application (13.5ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 75.6ms (Views: 19.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:30 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (11.0ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 22.6ms (Views: 17.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:03:35 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:04:51 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (14.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 37.1ms (Views: 19.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:52 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (8.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 14.8ms (Views: 12.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /application.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:54 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (11.6ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 24.0ms (Views: 19.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:04:55 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2015-08-15 16:05:02 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mMoviegoer Load (0.4ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/_movie.html.haml (1.0ms)
+Completed 200 OK in 9.1ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2015-08-15 16:05:02 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/_movie.html.haml (1.0ms)
+Completed 200 OK in 5.6ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4/reviews/new" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"4"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1
+  Rendered reviews/new.html.haml within layouts/application (1.6ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 15.6ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:03 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/4/reviews" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5abQcavPALD5nBHyvRXlZQ5NCWqq3Y3kCnQ9mRbttE=", "review"=>{"potatoes"=>"5"}, "commit"=>"Create Review", "movie_id"=>"4"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("comments", "movie_id", "moviegoer_id", "potatoes") VALUES (?, ?, ?, ?)[0m  [["comments", nil], ["movie_id", 4], ["moviegoer_id", 1], ["potatoes", 5]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 13.8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/show.html.haml within layouts/application (3.2ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 10.9ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:06 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (8.7ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 16.8ms (Views: 13.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:05:08 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:06:01 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (1.0ms)
+Completed 200 OK in 7.6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:06:01 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.7ms)
+Completed 200 OK in 6.1ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:06:02 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (1.1ms)
+Completed 200 OK in 9.4ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-08-15 16:06:02 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 5.9ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2015-08-15 16:06:04 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 6.0ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2015-08-15 16:06:04 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered movies/_movie.html.haml (0.5ms)
+Completed 200 OK in 3.6ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2015-08-15 16:06:07 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered movies/_movie.html.haml (1.0ms)
+Completed 200 OK in 7.4ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2015-08-15 16:06:07 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered movies/_movie.html.haml (0.9ms)
+Completed 200 OK in 6.9ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2015-08-15 16:06:16 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/_movie.html.haml (1.7ms)
+Completed 200 OK in 10.4ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2015-08-15 16:06:16 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/_movie.html.haml (0.8ms)
+Completed 200 OK in 6.6ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.3ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 2
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 3
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = 4
+  Rendered movies/index.html.haml within layouts/application (13.2ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 25.5ms (Views: 21.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_list_filter.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /movie_list_filter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /movie_popup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movie_popup_spec.js?body=1" for 127.0.0.1 at 2015-08-15 16:52:39 -0400
+Served asset /movie_popup_spec.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/top_movies" for 127.0.0.1 at 2015-08-15 16:53:06 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"top_movies"}
+  [1m[36mMoviegoer Load (0.4ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "top_movies"]]
+Completed 404 Not Found in 3.6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Movie with id=top_movies):
+  app/controllers/movies_controller.rb:19:in `show'
+
+
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/greg/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)

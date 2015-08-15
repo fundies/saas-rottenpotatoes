@@ -1,0 +1,19 @@
+%h1 Search Results:
+
+- if @movies.empty?
+  %p No results were found
+
+- @movies.each do |movie|
+
+  %h2= movie.original_title
+
+  %ul#details
+    %li
+      %strong Rating:
+      = movie.vote_average
+    %li
+      %strong Release Date:
+      = movie.release_date
+    %li
+      %strong Description:
+      = truncate(movie.overview, :length => 250)
